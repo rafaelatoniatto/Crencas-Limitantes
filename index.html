@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Teste Rápido de Crenças Limitantes">
+<title>Teste Rápido de Crenças Limitantes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">AUTOCONHECIMENTO</span>
+    <h1>Teste Rápido de Crenças Limitantes</h1>
+    <p>Ideias, interpretações ou “verdades” que uma pessoa internaliza ao longo da vida — muitas vezes de forma inconsciente.</p>
+  </div>
+</header>
+
+<main class="container">
+<section class="instructions card">
+  <h2>Como responder</h2>
+  <p>Preencha seus dados pessoais, depois leia cada afirmação e marque o quanto ela se aplica a você, usando a escala:</p>
+  <div class="scale">
+    <span><strong>1</strong> = Nunca</span><span><strong>2</strong> = Raramente</span>
+    <span><strong>3</strong> = Às vezes</span><span><strong>4</strong> = Frequentemente</span>
+    <span><strong>5</strong> = Sempre</span>
+  </div>
+  <p class="instruction-note">Para o resultado final, some os pontos das respostas e envie.</p>
+</section>
+
+<form id="testForm" novalidate>
+<section class="card" id="personalData">
+  <label for="name">Nome: <span class="required">*</span></label>
+  <input id="name" type="text" placeholder="">
+<div class="error-msg" id="personalError"></div>
+</section>
+
+<div id="questionsContainer"></div>
+
+<section class="card scoring-reference">
+  <h2>PONTUAÇÃO</h2>
+  <p>A soma dos pontos de todas as suas respostas:</p>
+  <ul>
+    <li><strong>De 10 a 19 pontos</strong> → Crenças limitantes pouco presentes.</li>
+    <li><strong>De 20 a 34 pontos</strong> → Crenças limitantes moderadas; já interferem em decisões estratégicas.</li>
+    <li><strong>De 35 a 50 pontos</strong> → Crenças limitantes fortes; afetam significativamente sua confiança e crescimento.</li>
+  </ul>
+</section>
+
+<div class="actions">
+  <button type="submit" class="btn-primary">VER MEU RESULTADO <span>→</span></button>
+</div>
+</form>
+
+<section id="resultSection" class="result-section" hidden>
+  <div class="result-header">
+    <span class="eyebrow">SEU RESULTADO</span>
+    <h2 id="resultTitle">Seu resultado</h2>
+    <p id="greetingText"></p>
+  </div>
+  <div class="result-card score-result">
+    <span class="eyebrow">PONTUAÇÃO TOTAL</span>
+    <div class="total-score" id="totalScore">0</div>
+    <p id="resultLevel"></p>
+  </div>
+  <div class="result-card">
+    <h3>Como interpretar seu resultado</h3>
+    <p id="resultDescription"></p>
+  </div>
+  <div class="result-actions">
+    <button type="button" id="printButton" class="secondary-button">IMPRIMIR MEU RESULTADO</button>
+    <button type="button" id="restartButton" class="outline-button">REFAZER TESTE</button>
+  </div>
+</section>
+</main>
+
+<footer><p>Claudia Demétrio</p></footer>
+<script src="js/script.js"></script>
+</body>
+</html>
