@@ -1,0 +1,395 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #741537;
+  color: #242424;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.5;
+  padding-bottom: 60px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(900px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.hero {
+  background: #741537;
+  color: #fff;
+  text-align: center;
+  padding: 60px 25px 45px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  color: rgba(255,255,255,.8);
+}
+
+.hero h1 {
+  margin: 8px 0 15px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 6vw, 52px);
+  line-height: 1.15;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: auto;
+  color: rgba(255,255,255,.88);
+  font-size: 14px;
+}
+
+.card,
+.result-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  padding: 25px;
+  margin-bottom: 18px;
+}
+
+.instructions h2,
+.scoring-reference h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.instructions p,
+.scoring-reference p,
+.scoring-reference li {
+  font-size: 13px;
+}
+
+.scale {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 18px;
+}
+
+.scale strong {
+  color: #741537;
+}
+
+.instruction-note {
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+#personalData label {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+#personalData input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 9px 0;
+  margin-bottom: 24px;
+  outline: none;
+  background: transparent;
+}
+
+#personalData input:focus {
+  border-bottom-color: #741537;
+}
+
+.required {
+  color: #b44343;
+}
+
+.q-meta {
+  font-size: 10px;
+  color: #777;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.q-text {
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.scale-options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 650px;
+  margin: auto;
+}
+
+.scale-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.scale-option input {
+  width: 19px;
+  height: 19px;
+  accent-color: #741537;
+}
+
+.card.has-error {
+  border-color: #b44343;
+}
+
+.error-msg {
+  display: none;
+  color: #b44343;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.card.has-error .error-msg {
+  display: block;
+}
+
+.actions,
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 0 20px;
+}
+
+.btn-primary,
+.secondary-button,
+.outline-button {
+  border-radius: 13px;
+  padding: 14px 24px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  cursor: pointer;
+}
+
+.btn-primary,
+.secondary-button {
+  border: 0;
+  background: #741537;
+  color: #fff;
+}
+
+.outline-button {
+  border: 1px solid #741537;
+  background: #fff;
+  color: #741537;
+}
+
+.result-section {
+  margin-top: 30px;
+}
+
+.result-header {
+  background: #741537;
+  color: #fff;
+  text-align: center;
+  padding: 35px 25px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+}
+
+.result-header h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 5vw, 44px);
+  margin: 7px 0;
+}
+
+.result-header p {
+  color: rgba(255,255,255,.88);
+  font-size: 13px;
+}
+
+.score-result {
+  text-align: center;
+}
+
+.score-result .eyebrow {
+  color: #741537;
+}
+
+.total-score {
+  color: #741537;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.result-card h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.result-card p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+footer {
+  text-align: center;
+  margin-top: 25px;
+  color: rgba(255,255,255,.9);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  .btn-primary,
+  .secondary-button,
+  .outline-button {
+    width: 100%;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    background: #fff !important;
+  }
+
+  header.hero {
+    display: none !important;
+  }
+
+  main.container > * {
+    display: none !important;
+  }
+
+  main.container > #resultSection {
+    display: block !important;
+    width: 80% !important;
+    max-width: 650px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    background: #fff !important;
+  }
+
+  #resultSection .result-header {
+    padding: 18px !important;
+    margin-bottom: 15px !important;
+    background: #fff !important;
+    color: #741537 !important;
+  }
+
+  #resultSection .result-header .eyebrow,
+  #resultSection .result-header h2,
+  #resultSection .result-header p {
+    color: #741537 !important;
+    opacity: 1 !important;
+  }
+
+  #resultSection .result-header h2 {
+    font-size: 24px !important;
+    margin: 5px 0 !important;
+  }
+
+  #resultSection .result-header p {
+    font-size: 12px !important;
+    margin: 5px 0 !important;
+  }
+
+  #resultSection .result-card {
+    padding: 15px !important;
+    margin-bottom: 12px !important;
+  }
+
+  #resultSection .total-score {
+    font-size: 48px !important;
+  }
+
+  #resultSection .result-card h3 {
+    font-size: 15px !important;
+  }
+
+  #resultSection .result-card p {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+  }
+
+  #resultSection .result-actions {
+    display: none !important;
+  }
+
+  #resultSection,
+  #resultSection .result-header,
+  #resultSection .result-card {
+    box-shadow: none !important;
+  }
+
+  #resultSection .result-header,
+  #resultSection .result-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  footer {
+    display: block !important;
+    width: 80% !important;
+    max-width: 650px !important;
+    margin: 25px auto 0 !important;
+    padding-top: 10px;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    color: #741537 !important;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+  }
+
+  #resultSection * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
